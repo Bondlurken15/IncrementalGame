@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Clicker : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    int clickCounter = 0;
+    [SerializeField] TextMeshProUGUI clickCounterText;
+    
+    public void OnClick()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        clickCounter++;
+        clickCounterText.text = clickCounter.ToString();
     }
 }
