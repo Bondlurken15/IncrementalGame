@@ -26,7 +26,6 @@ public class OboyGlasSpawner : MonoBehaviour
         
         while (spawnOboyGlas)
         {
-            Debug.Log("true");
             SpawnOboyGlas();
 
             yield return new WaitForSeconds(spawnDelay);
@@ -37,7 +36,6 @@ public class OboyGlasSpawner : MonoBehaviour
 
     void SpawnOboyGlas()
     {
-        Debug.Log("Spawned");
         Vector3 spawnPosition = new Vector3(Random.Range(-960, 960), 581);
         GameObject newOboyGlas = Instantiate(oboyGlas, spawnPosition, Quaternion.identity);
         newOboyGlas.transform.SetParent(canvas.transform, false);

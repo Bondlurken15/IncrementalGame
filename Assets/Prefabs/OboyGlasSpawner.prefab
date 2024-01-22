@@ -47,4 +47,4 @@ MonoBehaviour:
   canvas: {fileID: 0}
   oboyGlas: {fileID: 812823664626681914, guid: 25b9c130d37927c41949158181a0369c, type: 3}
   spawnOboyGlas: 0
-  spawnDelay: 0.75
+  spawnDelay: 0.4

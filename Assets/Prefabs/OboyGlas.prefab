@@ -91,6 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minRotationSpeed: 200
   maxRotationSpeed: 220
+  lifetime: 5
   startSpeed: {x: 0, y: 0}
   myRigidbody: {fileID: -6332291969764575732}
 --- !u!50 &-6332291969764575732
