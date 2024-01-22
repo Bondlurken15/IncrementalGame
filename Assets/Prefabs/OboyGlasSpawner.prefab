@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1493725011121684727}
   - component: {fileID: 5637615528078616459}
   m_Layer: 0
-  m_Name: OboyGlassSpawner
+  m_Name: OboyGlasSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,6 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
-  oboyGlas: {fileID: 0}
-  spawnImages: 0
+  oboyGlas: {fileID: 812823664626681914, guid: 25b9c130d37927c41949158181a0369c, type: 3}
+  spawnOboyGlas: 0
   spawnDelay: 0.75

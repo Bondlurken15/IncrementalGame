@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OboyGlass : MonoBehaviour
+public class OboyGlas : MonoBehaviour
 {
     [SerializeField] float minRotationSpeed = 200;
     [SerializeField] float maxRotationSpeed = 220;
