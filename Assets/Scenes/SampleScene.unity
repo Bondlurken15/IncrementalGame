@@ -1210,6 +1210,10 @@ PrefabInstance:
       value: Clicker
       objectReference: {fileID: 0}
     - target: {fileID: 4970268739626246694, guid: c5bfecf693c9e5a46b2545c5b6931000, type: 3}
+      propertyPath: autoClickButton
+      value: 
+      objectReference: {fileID: 1460894607}
+    - target: {fileID: 4970268739626246694, guid: c5bfecf693c9e5a46b2545c5b6931000, type: 3}
       propertyPath: clickCounterText
       value: 
       objectReference: {fileID: 1342615587}
