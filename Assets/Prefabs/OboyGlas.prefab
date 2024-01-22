@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4841644888223642783}
   - component: {fileID: -6332291969764575732}
   m_Layer: 5
-  m_Name: OboyGlass
+  m_Name: OboyGlas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,7 +89,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67bf7b2cd01930943a71cf92ac7d69dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 200
+  minRotationSpeed: 200
+  maxRotationSpeed: 220
+  lifetime: 5
   startSpeed: {x: 0, y: 0}
   myRigidbody: {fileID: -6332291969764575732}
 --- !u!50 &-6332291969764575732

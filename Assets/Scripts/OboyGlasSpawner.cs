@@ -3,26 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class OboyGlassSpawner : MonoBehaviour
+public class OboyGlasSpawner : MonoBehaviour
 {
     [SerializeField] GameObject canvas;
     [SerializeField] GameObject oboyGlas;
-    [SerializeField] bool spawnImages = false;
-    [SerializeField] float spawnDelay = 1.0f; 
+    [SerializeField] bool spawnOboyGlas = false;
+    [SerializeField] float spawnDelay = 1.0f;
 
-    void Start()
+    bool isCoroutineRunning = false;
+
+    void Update()
     {
-        StartCoroutine(SpawnImagesWithDelay());
+        if (spawnOboyGlas && !isCoroutineRunning)
+        {
+            StartCoroutine(SpawnImagesWithDelay());
+        } 
     }
 
     IEnumerator SpawnImagesWithDelay()
     {
-        while (spawnImages)
+        isCoroutineRunning = true;
+        
+        while (spawnOboyGlas)
         {
             SpawnOboyGlas();
 
             yield return new WaitForSeconds(spawnDelay);
         }
+
+        isCoroutineRunning = false;
     }
 
     void SpawnOboyGlas()
