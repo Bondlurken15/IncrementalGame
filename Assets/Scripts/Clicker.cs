@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.Threading;
 
 public class Clicker : MonoBehaviour
 {
@@ -11,13 +12,17 @@ public class Clicker : MonoBehaviour
     [SerializeField] int autoClickAmount = 1;
     [SerializeField] TextMeshProUGUI oboyClickCounterText;
     [SerializeField] TextMeshProUGUI milkClickCounterText;
+    [SerializeField] float mixTimer = 10f;
 
     private bool autoClickRunning;
     int oboyClickCounter = 0;
     int milkClickCounter = 0;
+    float currentMixTimer;
 
     private void Start()
     {
+        currentMixTimer = mixTimer;
+        
         autoClickRunning = isAutoClick;
         if (isAutoClick)
         {
@@ -27,8 +32,6 @@ public class Clicker : MonoBehaviour
 
     private void Update()
     {
-      
-
         // Check if the state of isAutoClick has changed
         if (isAutoClick != autoClickRunning)
         {
@@ -42,6 +45,14 @@ public class Clicker : MonoBehaviour
             {
                 StopCoroutine(AutoClickCoroutine());
             }
+        }
+
+        currentMixTimer -= Time.deltaTime;
+        if (currentMixTimer <= 0)
+        {
+            
+            
+            currentMixTimer = mixTimer;
         }
     }
 
@@ -61,6 +72,8 @@ public class Clicker : MonoBehaviour
     {
         oboyClickCounter += autoClickAmount;
         oboyClickCounterText.text = oboyClickCounter.ToString();
+        milkClickCounter += autoClickAmount;
+        milkClickCounterText.text = milkClickCounter.ToString();
     }
 
     public void ToggleAutoClick()

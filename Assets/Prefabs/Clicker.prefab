@@ -44,4 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d0c9d7f464352446b794602260c3202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickCounterText: {fileID: 0}
+  isAutoClick: 0
+  autoClickInterval: 1
+  autoClickAmount: 1
+  oboyClickCounterText: {fileID: 0}
+  milkClickCounterText: {fileID: 0}
