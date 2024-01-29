@@ -9,10 +9,12 @@ public class Clicker : MonoBehaviour
     [SerializeField] bool isAutoClick;
     [SerializeField] float autoClickInterval = 1.0f;
     [SerializeField] int autoClickAmount = 1;
-    int clickCounter = 0;
-    [SerializeField] TextMeshProUGUI clickCounterText;
+    [SerializeField] TextMeshProUGUI oboyClickCounterText;
+    [SerializeField] TextMeshProUGUI milkClickCounterText;
 
     private bool autoClickRunning;
+    int oboyClickCounter = 0;
+    int milkClickCounter = 0;
 
     private void Start()
     {
@@ -43,16 +45,22 @@ public class Clicker : MonoBehaviour
         }
     }
 
-    public void OnClick()
+    public void OnOboyClick()
     {
-        clickCounter++;
-        clickCounterText.text = clickCounter.ToString();
+        oboyClickCounter++;
+        oboyClickCounterText.text = oboyClickCounter.ToString();
+    }
+
+    public void OnMilkClick()
+    {
+        milkClickCounter++;
+        milkClickCounterText.text = milkClickCounter.ToString();
     }
 
     void AutoClick()
     {
-        clickCounter += autoClickAmount;
-        clickCounterText.text = clickCounter.ToString();
+        oboyClickCounter += autoClickAmount;
+        oboyClickCounterText.text = oboyClickCounter.ToString();
     }
 
     public void ToggleAutoClick()
