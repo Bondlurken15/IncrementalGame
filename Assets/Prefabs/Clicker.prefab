@@ -46,7 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAutoClick: 0
   autoClickInterval: 0
+  mixTimer: 10
   autoClickAmount: 1
+  baseOCash: 1
   oboyClickCounterText: {fileID: 0}
   milkClickCounterText: {fileID: 0}
-  mixTimer: 10
+  currentMixTimerText: {fileID: 0}
