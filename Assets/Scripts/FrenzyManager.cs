@@ -41,6 +41,11 @@ public class FrenzyManager : MonoBehaviour
         
     }
 
+    public void ActivateFrenzyEffect()
+    {
+        spawnOboyGlas = !spawnOboyGlas;
+    }
+
     void SpawnOboyGlas()
     {
         Vector3 spawnPosition = new Vector3(Random.Range(-960, 960), 581);
