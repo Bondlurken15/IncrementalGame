@@ -11,7 +11,6 @@ public class Clicker : MonoBehaviour
     [SerializeField] int autoClickAmount = 1;
     int clickCounter = 0;
     [SerializeField] TextMeshProUGUI clickCounterText;
-    [SerializeField] Button autoClickButton;
 
     private bool autoClickRunning;
 
@@ -22,14 +21,11 @@ public class Clicker : MonoBehaviour
         {
             StartCoroutine(AutoClickCoroutine());
         }
-
-        // Attach the button click event handler
-        autoClickButton.onClick.AddListener(ToggleAutoClick);
     }
 
     private void Update()
     {
-      
+
 
         // Check if the state of isAutoClick has changed
         if (isAutoClick != autoClickRunning)
@@ -59,7 +55,7 @@ public class Clicker : MonoBehaviour
         clickCounterText.text = clickCounter.ToString();
     }
 
-    void ToggleAutoClick()
+    public void ToggleAutoClick()
     {
         isAutoClick = !isAutoClick; // Toggle the value
     }
