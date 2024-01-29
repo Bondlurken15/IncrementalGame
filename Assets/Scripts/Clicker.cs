@@ -11,18 +11,22 @@ public class Clicker : MonoBehaviour
     [SerializeField] float autoClickInterval = 1.0f;
     [SerializeField] float mixTimer = 10f;
     [SerializeField] int autoClickAmount = 1;
+    [SerializeField] int baseOCash;
     [SerializeField] TextMeshProUGUI oboyClickCounterText;
     [SerializeField] TextMeshProUGUI milkClickCounterText;
-    [SerializeField] TextMeshProUGUI mixTimerText;
-
+    [SerializeField] TextMeshProUGUI currentMixTimerText;
 
     private bool autoClickRunning;
     int oboyClickCounter = 0;
     int milkClickCounter = 0;
     float currentMixTimer;
 
+    Shop shop;
+
     private void Start()
     {
+        shop = FindObjectOfType<Shop>();
+        
         currentMixTimer = mixTimer;
         
         autoClickRunning = isAutoClick;
@@ -51,11 +55,28 @@ public class Clicker : MonoBehaviour
         
         currentMixTimer -= Time.deltaTime;
         int seconds = Mathf.FloorToInt(currentMixTimer % 60);
-        mixTimerText.text = seconds.ToString();
+        currentMixTimerText.text = seconds.ToString();
         
         if (currentMixTimer <= 0)
         {
-            
+            if (milkClickCounter > oboyClickCounter)
+            {
+                float oCashToAdd = (oboyClickCounter / milkClickCounter) * baseOCash * oboyClickCounter;
+                shop.AddOCash(oCashToAdd);
+                Debug.Log(oboyClickCounter/milkClickCounter);
+            }
+            else if (milkClickCounter < oboyClickCounter)
+            {
+                float oCashToAdd = (milkClickCounter / oboyClickCounter) * baseOCash * milkClickCounter;
+                Debug.Log(oCashToAdd.ToString());
+                shop.AddOCash(oCashToAdd);
+            }
+            else if (milkClickCounter == oboyClickCounter)
+            {
+                float oCashToAdd = (milkClickCounter / oboyClickCounter) * baseOCash * oboyClickCounter;
+                shop.AddOCash(oCashToAdd);
+                Debug.Log(oCashToAdd.ToString());
+            }
 
             currentMixTimer = mixTimer;
         }
