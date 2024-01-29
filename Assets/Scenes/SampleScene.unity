@@ -174,6 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimerText: {fileID: 38586580}
+  elapsedTime: 10
 --- !u!114 &38586580
 MonoBehaviour:
   m_ObjectHideFlags: 0
