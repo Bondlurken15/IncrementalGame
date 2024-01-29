@@ -59,25 +59,25 @@ public class Clicker : MonoBehaviour
         
         if (currentMixTimer <= 0)
         {
-            if (milkClickCounter > oboyClickCounter)
+            if (milkClickCounter >= oboyClickCounter)
             {
-                float oCashToAdd = (oboyClickCounter / milkClickCounter) * baseOCash * oboyClickCounter;
+                float oboyClicks = oboyClickCounter;
+                float milkClicks = milkClickCounter;
+                float oCashToAdd = (oboyClicks / milkClicks) * baseOCash * oboyClicks;
                 shop.AddOCash(oCashToAdd);
-                Debug.Log(oboyClickCounter/milkClickCounter);
             }
             else if (milkClickCounter < oboyClickCounter)
             {
-                float oCashToAdd = (milkClickCounter / oboyClickCounter) * baseOCash * milkClickCounter;
-                Debug.Log(oCashToAdd.ToString());
+                float oboyClicks = oboyClickCounter;
+                float milkClicks = milkClickCounter;
+                float oCashToAdd = (milkClicks / oboyClicks) * baseOCash * milkClicks;
                 shop.AddOCash(oCashToAdd);
-            }
-            else if (milkClickCounter == oboyClickCounter)
-            {
-                float oCashToAdd = (milkClickCounter / oboyClickCounter) * baseOCash * oboyClickCounter;
-                shop.AddOCash(oCashToAdd);
-                Debug.Log(oCashToAdd.ToString());
             }
 
+            oboyClickCounter = 0;
+            milkClickCounter = 0;
+            oboyClickCounterText.text = oboyClickCounter.ToString();
+            milkClickCounterText.text = milkClickCounter.ToString();
             currentMixTimer = mixTimer;
         }
     }
