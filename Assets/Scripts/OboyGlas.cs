@@ -34,5 +34,7 @@ public class OboyGlas : MonoBehaviour
     IEnumerator DieAfterLifetime()
     {
         yield return new WaitForSeconds(lifetime);
+
+        Destroy(gameObject);
     }
 }
