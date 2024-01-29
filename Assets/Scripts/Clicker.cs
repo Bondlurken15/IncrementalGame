@@ -9,10 +9,12 @@ public class Clicker : MonoBehaviour
 {
     [SerializeField] bool isAutoClick;
     [SerializeField] float autoClickInterval = 1.0f;
+    [SerializeField] float mixTimer = 10f;
     [SerializeField] int autoClickAmount = 1;
     [SerializeField] TextMeshProUGUI oboyClickCounterText;
     [SerializeField] TextMeshProUGUI milkClickCounterText;
-    [SerializeField] float mixTimer = 10f;
+    [SerializeField] TextMeshProUGUI mixTimerText;
+
 
     private bool autoClickRunning;
     int oboyClickCounter = 0;
@@ -46,12 +48,15 @@ public class Clicker : MonoBehaviour
                 StopCoroutine(AutoClickCoroutine());
             }
         }
-
+        
         currentMixTimer -= Time.deltaTime;
+        int seconds = Mathf.FloorToInt(currentMixTimer % 60);
+        mixTimerText.text = seconds.ToString();
+        
         if (currentMixTimer <= 0)
         {
             
-            
+
             currentMixTimer = mixTimer;
         }
     }
