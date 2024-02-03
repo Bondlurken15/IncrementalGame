@@ -7,6 +7,8 @@ using System.Threading;
 
 public class Clicker : MonoBehaviour
 {
+    [SerializeField] int oboyClickAmount = 1;
+    [SerializeField] int milkClickAmount = 1;
     [SerializeField] bool isAutoClick;
     [SerializeField] float autoClickInterval = 1.0f;
     [SerializeField] float mixTimer = 10f;
@@ -59,7 +61,11 @@ public class Clicker : MonoBehaviour
         
         if (currentMixTimer <= 0)
         {
-            if (milkClickCounter >= oboyClickCounter)
+            if (oboyClickCounter == 0 || milkClickCounter == 0)
+            {
+                
+            }
+            else if (milkClickCounter >= oboyClickCounter)
             {
                 float oboyClicks = oboyClickCounter;
                 float milkClicks = milkClickCounter;
@@ -73,6 +79,7 @@ public class Clicker : MonoBehaviour
                 float oCashToAdd = (milkClicks / oboyClicks) * baseOCash * milkClicks;
                 shop.AddOCash(oCashToAdd);
             }
+            
 
             oboyClickCounter = 0;
             milkClickCounter = 0;
@@ -84,13 +91,13 @@ public class Clicker : MonoBehaviour
 
     public void OnOboyClick()
     {
-        oboyClickCounter++;
+        oboyClickCounter += oboyClickAmount;
         oboyClickCounterText.text = oboyClickCounter.ToString();
     }
 
     public void OnMilkClick()
     {
-        milkClickCounter++;
+        milkClickCounter += milkClickAmount;
         milkClickCounterText.text = milkClickCounter.ToString();
     }
 
@@ -105,6 +112,11 @@ public class Clicker : MonoBehaviour
     public void ToggleAutoClick()
     {
         isAutoClick = !isAutoClick; // Toggle the value
+    }
+
+    public void UpgradeOboyClickAmount()
+    {
+        oboyClickAmount++;
     }
 
     IEnumerator AutoClickCoroutine()
