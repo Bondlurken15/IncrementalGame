@@ -119,6 +119,16 @@ public class Clicker : MonoBehaviour
         oboyClickAmount++;
     }
 
+    public void UpgradeMilkClickAmount()
+    {
+        milkClickAmount++;
+    }
+
+    public void UpgradeBaseOCash()
+    {
+        baseOCash++;
+    }
+
     IEnumerator AutoClickCoroutine()
     {
         while (autoClickRunning)

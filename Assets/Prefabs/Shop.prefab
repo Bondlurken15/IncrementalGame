@@ -45,4 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cashForOboyClickAmountUpgrade: 10
+  cashForMilkClickAmountUpgrade: 10
   oCashText: {fileID: 0}

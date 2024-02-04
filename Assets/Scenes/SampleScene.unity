@@ -154,7 +154,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1096565530}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -272,11 +272,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 38586577}
   m_CullTransparentMesh: 1
---- !u!224 &189729782 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7394132612557219432, guid: f07eb409f0c4e2d458f264b9c07bd65c, type: 3}
-  m_PrefabInstance: {fileID: 4960199438982321746}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &285829050 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 631803735892219367, guid: c5bfecf693c9e5a46b2545c5b6931000, type: 3}
@@ -559,33 +554,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1206818101138673070, guid: 2e4f42dfe97df824c94e88fd6111b595, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1206818101138673070, guid: 2e4f42dfe97df824c94e88fd6111b595, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1206818101138673070, guid: 2e4f42dfe97df824c94e88fd6111b595, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1711786473}
-    - target: {fileID: 1206818101138673070, guid: 2e4f42dfe97df824c94e88fd6111b595, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1206818101138673070, guid: 2e4f42dfe97df824c94e88fd6111b595, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: BuyOboyClickAmountUpgrade
-      objectReference: {fileID: 0}
-    - target: {fileID: 1206818101138673070, guid: 2e4f42dfe97df824c94e88fd6111b595, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Shop, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1206818101138673070, guid: 2e4f42dfe97df824c94e88fd6111b595, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 1941995721083007737, guid: 2e4f42dfe97df824c94e88fd6111b595, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -682,6 +653,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8277367629892947406, guid: 2e4f42dfe97df824c94e88fd6111b595, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1711786473}
+    - target: {fileID: 8425035695880190302, guid: 2e4f42dfe97df824c94e88fd6111b595, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1711786473}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -708,6 +687,18 @@ PrefabInstance:
       propertyPath: oCashText
       value: 
       objectReference: {fileID: 1550560170}
+    - target: {fileID: 1456616124717743546, guid: aeed160d76566da4da7cad36a1cb4c8e, type: 3}
+      propertyPath: oCashForBaseOCashUpgrade
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456616124717743546, guid: aeed160d76566da4da7cad36a1cb4c8e, type: 3}
+      propertyPath: oCashForMilkClickAmountUpgrade
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456616124717743546, guid: aeed160d76566da4da7cad36a1cb4c8e, type: 3}
+      propertyPath: oCashForOboyClickAmountUpgrade
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1796115395995460982, guid: aeed160d76566da4da7cad36a1cb4c8e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -898,3 +889,4 @@ SceneRoots:
   - {fileID: 7889337784606330095}
   - {fileID: 5355059725392237776}
   - {fileID: 1737266038}
+  - {fileID: 38586578}

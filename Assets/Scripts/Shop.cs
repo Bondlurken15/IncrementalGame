@@ -8,7 +8,9 @@ public class Shop : MonoBehaviour
     float oCash = 0;
     Clicker clicker;
 
-    [SerializeField] float cashForOboyClickAmountUpgrade;
+    [SerializeField] float oCashForOboyClickAmountUpgrade;
+    [SerializeField] float oCashForMilkClickAmountUpgrade;
+    [SerializeField] float oCashForBaseOCashUpgrade;
     [SerializeField] TextMeshProUGUI oCashText;
     
     void Start()
@@ -29,11 +31,32 @@ public class Shop : MonoBehaviour
 
     public void BuyOboyClickAmountUpgrade()
     {
-        if (oCash >= cashForOboyClickAmountUpgrade)
+        if (oCash >= oCashForOboyClickAmountUpgrade)
         {
-            oCash -= cashForOboyClickAmountUpgrade;
+            oCash -= oCashForOboyClickAmountUpgrade;
             oCashText.text = oCash.ToString();
             clicker.UpgradeOboyClickAmount();
+        }
+    }
+
+    public void BuyMilkClickAmountUpgrade()
+    {
+        if (oCash >= oCashForMilkClickAmountUpgrade)
+        {
+            oCash -= oCashForMilkClickAmountUpgrade;
+            oCashText.text = oCash.ToString();
+            clicker.UpgradeMilkClickAmount();
+        }
+    }
+
+    public void BuyBaseOCashUpgrade()
+    {
+        if (oCash >= oCashForBaseOCashUpgrade)
+        {
+            oCash -= oCashForBaseOCashUpgrade;
+            oCashText.text = oCash.ToString();
+            clicker.UpgradeBaseOCash();
+            oCashForBaseOCashUpgrade *= 2;
         }
     }
 }
