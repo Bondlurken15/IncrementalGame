@@ -44,8 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d0c9d7f464352446b794602260c3202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oboyClickAmount: 1
+  milkClickAmount: 1
   isAutoClick: 0
-  autoClickInterval: 0
+  autoClickInterval: 0.1
   mixTimer: 10
   autoClickAmount: 1
   baseOCash: 1

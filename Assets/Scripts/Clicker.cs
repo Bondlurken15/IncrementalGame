@@ -70,14 +70,16 @@ public class Clicker : MonoBehaviour
                 float oboyClicks = oboyClickCounter;
                 float milkClicks = milkClickCounter;
                 float oCashToAdd = (oboyClicks / milkClicks) * baseOCash * oboyClicks;
-                shop.AddOCash(oCashToAdd);
+                int oCashToAddRounded = Mathf.FloorToInt(oCashToAdd);
+                shop.AddOCash(oCashToAddRounded);
             }
             else if (milkClickCounter < oboyClickCounter)
             {
                 float oboyClicks = oboyClickCounter;
                 float milkClicks = milkClickCounter;
                 float oCashToAdd = (milkClicks / oboyClicks) * baseOCash * milkClicks;
-                shop.AddOCash(oCashToAdd);
+                int oCashToAddRounded = Mathf.FloorToInt(oCashToAdd);
+                shop.AddOCash(oCashToAddRounded);
             }
             
 

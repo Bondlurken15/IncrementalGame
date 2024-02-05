@@ -254,20 +254,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Clicker, Assembly-CSharp
-        m_MethodName: ToggleAutoClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: OboyGlasSpawner, Assembly-CSharp
-        m_MethodName: ActivateFrenzyEffect
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: BuyAutoClicker
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -959,7 +947,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimerText: {fileID: 8957532973894412700}
-  elapsedTime: 0
+  autoClickDuration: 10
+  elapsedTime: 10
 --- !u!1 &6936224348376373537
 GameObject:
   m_ObjectHideFlags: 0
@@ -1586,11 +1575,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7394132612557219432, guid: f07eb409f0c4e2d458f264b9c07bd65c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 400
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 7394132612557219432, guid: f07eb409f0c4e2d458f264b9c07bd65c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 400
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 7394132612557219432, guid: f07eb409f0c4e2d458f264b9c07bd65c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1650,19 +1639,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7759595873887247790, guid: f07eb409f0c4e2d458f264b9c07bd65c, type: 3}
       propertyPath: m_RaycastPadding.w
-      value: 76.23
+      value: 111.2
       objectReference: {fileID: 0}
     - target: {fileID: 7759595873887247790, guid: f07eb409f0c4e2d458f264b9c07bd65c, type: 3}
       propertyPath: m_RaycastPadding.x
-      value: 94.12
+      value: 146.4
       objectReference: {fileID: 0}
     - target: {fileID: 7759595873887247790, guid: f07eb409f0c4e2d458f264b9c07bd65c, type: 3}
       propertyPath: m_RaycastPadding.y
-      value: 91
+      value: 142.4
       objectReference: {fileID: 0}
     - target: {fileID: 7759595873887247790, guid: f07eb409f0c4e2d458f264b9c07bd65c, type: 3}
       propertyPath: m_RaycastPadding.z
-      value: 117.13
+      value: 189.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1689,7 +1678,19 @@ PrefabInstance:
     - target: {fileID: 5383839671625906140, guid: 30de44a4f32421145a4aa9dfa002c875, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: c1af0d2ffd839d942be04667d6f80e20, type: 3}
+      objectReference: {fileID: 21300000, guid: 691c72313c88fcb41a0a578908b13a9e, type: 3}
+    - target: {fileID: 5383839671625906140, guid: 30de44a4f32421145a4aa9dfa002c875, type: 3}
+      propertyPath: m_RaycastPadding.w
+      value: 30.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 5383839671625906140, guid: 30de44a4f32421145a4aa9dfa002c875, type: 3}
+      propertyPath: m_RaycastPadding.x
+      value: 83.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 5383839671625906140, guid: 30de44a4f32421145a4aa9dfa002c875, type: 3}
+      propertyPath: m_RaycastPadding.z
+      value: 83.25
+      objectReference: {fileID: 0}
     - target: {fileID: 7487462201929950948, guid: 30de44a4f32421145a4aa9dfa002c875, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1716,7 +1717,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7487462201929950948, guid: 30de44a4f32421145a4aa9dfa002c875, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 160
+      value: 350
       objectReference: {fileID: 0}
     - target: {fileID: 7487462201929950948, guid: 30de44a4f32421145a4aa9dfa002c875, type: 3}
       propertyPath: m_SizeDelta.y
