@@ -237,6 +237,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &714185933 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4601737308733236256, guid: 2e4f42dfe97df824c94e88fd6111b595, type: 3}
+  m_PrefabInstance: {fileID: 3449208955924647197}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1096565526 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7956857649267968581, guid: 2e4f42dfe97df824c94e88fd6111b595, type: 3}
@@ -458,10 +469,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 285829050}
-    - target: {fileID: 1963034470353257838, guid: 2e4f42dfe97df824c94e88fd6111b595, type: 3}
-      propertyPath: elapsedTime
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 3394593970127724832, guid: 2e4f42dfe97df824c94e88fd6111b595, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -588,6 +595,10 @@ PrefabInstance:
       propertyPath: oCashText
       value: 
       objectReference: {fileID: 1550560170}
+    - target: {fileID: 1456616124717743546, guid: aeed160d76566da4da7cad36a1cb4c8e, type: 3}
+      propertyPath: autoClickerButton
+      value: 
+      objectReference: {fileID: 714185933}
     - target: {fileID: 1796115395995460982, guid: aeed160d76566da4da7cad36a1cb4c8e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -948,7 +948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimerText: {fileID: 8957532973894412700}
   autoClickDuration: 10
-  elapsedTime: 0
+  elapsedTime: 10
 --- !u!1 &6936224348376373537
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
@@ -15,17 +16,13 @@ public class Shop : MonoBehaviour
     [SerializeField] float oCashForBaseOCashUpgrade;
     [SerializeField] float oCashForAutoClicker;
     [SerializeField] TextMeshProUGUI oCashText;
-    
+    [SerializeField] Button autoClickerButton;
+
     void Start()
     {
         clicker = FindObjectOfType<Clicker>();
         timer = FindObjectOfType<Timer>();
         frenzyManager = FindObjectOfType<FrenzyManager>();
-    }
-
-    void Update()
-    {
-        
     }
 
     public void AddOCash(float cashToAdd)
@@ -76,7 +73,16 @@ public class Shop : MonoBehaviour
             clicker.ToggleAutoClick();
             timer.ToggleAutoClicker();
             frenzyManager.ActivateFrenzyEffect();
+            autoClickerButton.interactable = false;
             oCashForAutoClicker *= 2;
         }
+    }
+
+    public void TurnOffAutoClicker()
+    {
+        clicker.ToggleAutoClick();
+        timer.ToggleAutoClicker();
+        frenzyManager.ActivateFrenzyEffect();
+        autoClickerButton.interactable = true;
     }
 }

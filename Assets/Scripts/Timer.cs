@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using System;
 using Unity.VisualScripting.ReorderableList;
+using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class Timer : MonoBehaviour
     [SerializeField] float elapsedTime;
 
     bool autoClickerIsActive = false;
-    Clicker clicker;
+    Shop shop;
 
     private void Update()
     {
@@ -24,19 +25,18 @@ public class Timer : MonoBehaviour
 
     private void Start()
     {
-        clicker = FindObjectOfType<Clicker>();
+        shop = FindObjectOfType<Shop>();
 
         elapsedTime = autoClickDuration;
     }
 
     public void FrenzyTimer()
     {
-        elapsedTime += Time.deltaTime;
+        elapsedTime -= Time.deltaTime;
 
         if (elapsedTime <= 0)
         {
-            ToggleAutoClicker();
-            clicker.ToggleAutoClick();
+            shop.TurnOffAutoClicker();
             elapsedTime = autoClickDuration;
         }
 
