@@ -601,8 +601,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 291470642945463093, guid: 2e4f42dfe97df824c94e88fd6111b595, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 820
+      objectReference: {fileID: 0}
+    - target: {fileID: 291470642945463093, guid: 2e4f42dfe97df824c94e88fd6111b595, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -238
+      value: -146
       objectReference: {fileID: 0}
     - target: {fileID: 391768095919893014, guid: 2e4f42dfe97df824c94e88fd6111b595, type: 3}
       propertyPath: m_LocalPosition.x
@@ -744,6 +748,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 2894885546677607423, guid: 2e4f42dfe97df824c94e88fd6111b595, type: 3}
+      propertyPath: m_text
+      value: 'AUTO CLICK
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 3394593970127724832, guid: 2e4f42dfe97df824c94e88fd6111b595, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -864,6 +874,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1711786473}
+    - target: {fileID: 8466997268473361988, guid: 2e4f42dfe97df824c94e88fd6111b595, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.5114
+      objectReference: {fileID: 0}
+    - target: {fileID: 8466997268473361988, guid: 2e4f42dfe97df824c94e88fd6111b595, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.5114
+      objectReference: {fileID: 0}
+    - target: {fileID: 8466997268473361988, guid: 2e4f42dfe97df824c94e88fd6111b595, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.5114
+      objectReference: {fileID: 0}
+    - target: {fileID: 8466997268473361988, guid: 2e4f42dfe97df824c94e88fd6111b595, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -709
+      objectReference: {fileID: 0}
+    - target: {fileID: 8466997268473361988, guid: 2e4f42dfe97df824c94e88fd6111b595, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 472
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
