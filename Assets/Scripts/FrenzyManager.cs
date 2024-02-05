@@ -17,6 +17,7 @@ public class FrenzyManager : MonoBehaviour
     private void Start()
     {
         standardOboyScale = oboy.gameObject.transform.localScale;
+       
     }
 
     void Update()
@@ -28,6 +29,7 @@ public class FrenzyManager : MonoBehaviour
         if (isFrenzyActivated)
         {
             OboyPulse();
+           
         }
     }
 
