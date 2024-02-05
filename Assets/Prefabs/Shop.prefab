@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba0e9918efd268b48a40f55e6811f281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cashForOboyClickAmountUpgrade: 10
-  cashForMilkClickAmountUpgrade: 10
+  oCashForOboyClickAmountUpgrade: 10
+  oCashForMilkClickAmountUpgrade: 10
+  oCashForBaseOCashUpgrade: 20
+  oCashForAutoClicker: 1
   oCashText: {fileID: 0}

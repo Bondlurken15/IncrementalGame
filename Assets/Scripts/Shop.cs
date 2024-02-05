@@ -7,15 +7,20 @@ public class Shop : MonoBehaviour
 {
     float oCash = 0;
     Clicker clicker;
+    Timer timer;
+    FrenzyManager frenzyManager;
 
     [SerializeField] float oCashForOboyClickAmountUpgrade;
     [SerializeField] float oCashForMilkClickAmountUpgrade;
     [SerializeField] float oCashForBaseOCashUpgrade;
+    [SerializeField] float oCashForAutoClicker;
     [SerializeField] TextMeshProUGUI oCashText;
     
     void Start()
     {
         clicker = FindObjectOfType<Clicker>();
+        timer = FindObjectOfType<Timer>();
+        frenzyManager = FindObjectOfType<FrenzyManager>();
     }
 
     void Update()
@@ -36,6 +41,7 @@ public class Shop : MonoBehaviour
             oCash -= oCashForOboyClickAmountUpgrade;
             oCashText.text = oCash.ToString();
             clicker.UpgradeOboyClickAmount();
+            oCashForOboyClickAmountUpgrade *= 2;
         }
     }
 
@@ -46,6 +52,7 @@ public class Shop : MonoBehaviour
             oCash -= oCashForMilkClickAmountUpgrade;
             oCashText.text = oCash.ToString();
             clicker.UpgradeMilkClickAmount();
+            oCashForMilkClickAmountUpgrade *= 2;
         }
     }
 
@@ -57,6 +64,19 @@ public class Shop : MonoBehaviour
             oCashText.text = oCash.ToString();
             clicker.UpgradeBaseOCash();
             oCashForBaseOCashUpgrade *= 2;
+        }
+    }
+
+    public void BuyAutoClicker()
+    {
+        if (oCash >= oCashForAutoClicker)
+        {
+            oCash -= oCashForAutoClicker;
+            oCashText.text = oCash.ToString();
+            clicker.ToggleAutoClick();
+            timer.ToggleAutoClicker();
+            frenzyManager.ActivateFrenzyEffect();
+            oCashForAutoClicker *= 2;
         }
     }
 }
