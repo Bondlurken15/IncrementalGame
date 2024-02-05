@@ -11,7 +11,7 @@ public class Timer : MonoBehaviour
 
     public void FrenzyTimer()
     {
-        elapsedTime -= Time.deltaTime;
+        elapsedTime += Time.deltaTime;
 
         if (elapsedTime <= 0)
         {
