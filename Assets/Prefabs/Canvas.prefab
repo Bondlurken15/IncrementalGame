@@ -187,6 +187,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2140237315749132926}
     m_Modifications:
+    - target: {fileID: 21667783899432962, guid: 9f0839dc0d09476458699705f717fc3e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5931988730626470725, guid: 9f0839dc0d09476458699705f717fc3e, type: 3}
       propertyPath: m_Name
       value: Resume
@@ -287,7 +291,8 @@ PrefabInstance:
       propertyPath: m_RaycastPadding.z
       value: 105.82
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1726664245356963207, guid: 9f0839dc0d09476458699705f717fc3e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -305,6 +310,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2140237315749132926}
     m_Modifications:
+    - target: {fileID: 2450206080703829304, guid: f7eb767066b41ae418dc76d8cee1a023, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7264739230692731479, guid: f7eb767066b41ae418dc76d8cee1a023, type: 3}
       propertyPath: m_Name
       value: Exit
@@ -405,7 +414,8 @@ PrefabInstance:
       propertyPath: m_RaycastPadding.z
       value: 59.23
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7231134568085372498, guid: f7eb767066b41ae418dc76d8cee1a023, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

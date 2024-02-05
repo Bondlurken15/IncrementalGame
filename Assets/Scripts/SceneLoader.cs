@@ -5,7 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    [SerializeField] Canvas canvas;
 
+    private void Start()
+    {
+        canvas.gameObject.SetActive(true);
+    }
 
     private void Update()
     {
@@ -14,20 +19,21 @@ public class SceneLoader : MonoBehaviour
     }
 
 
-    public void LoadNextScene()
+    public void DeactivateCanvas()
     {
-        // local int variable that saves the value of the current scene (the one we are in)
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        canvas.gameObject.SetActive(false);
+    }
 
-        SceneManager.LoadScene(0);
-
+    public void ActivateCanvas()
+    {
+        canvas.gameObject.SetActive(true);
     }
 
     public void LoadMenu()
     {
         if(Input.GetKeyUp(KeyCode.Escape))
         {
-            SceneManager.LoadScene(1);
+            canvas.gameObject.SetActive(true);
         }
     }
 
